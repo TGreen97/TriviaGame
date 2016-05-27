@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 	   // GLOBAL VARIABLES
 	var triviaQuestions = {
-        q1: ["Are you ready?", true],
+        q1: ["Are you ready?", "no", "of course", "stop talking"],
         q2: ["Are you for real?", false],
         q3: ["Are you the master?", true],
     }
@@ -34,17 +34,24 @@ $( document ).ready(function() {
         }
       }
 	  run();
-
-	  var q1Answer = confirm(triviaQuestions.q1[0]);
-	  if (q1Answer == triviaQuestions.q1[1]) {
-	  	correct++;
-	  } else {
-	  	incorrect++;
-	  }
-	  //==============
-
+	  qAndA();
 	}	
     
+    var qAndA = function() {
+    	$(".triviaQuestions").html(triviaQuestions.q1[0]);
+    	$("#a").html(triviaQuestions.q1[1]);
+    	$("#b").html(triviaQuestions.q1[2]);
+    	$("#c").html(triviaQuestions.q1[3]);
+    } 
+    //q1Answer = push(triviaQuestions.q1[0]);
+	  
+	  //if (q1Answer == triviaQuestions.q1[1]) {
+	  //	correct++;
+	  //} else {
+	  //	incorrect++;
+	  //}
+	  //==============
+
 
       // MAIN GAME
     startGame();
