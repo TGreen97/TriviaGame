@@ -16,7 +16,7 @@ $( document ).ready(function() {
       // FUNCTIONS
     function startGame(){
 
-      var number = 91;
+      var number = 61;
       var correct = 0;
       var incorrect = 0;
      
