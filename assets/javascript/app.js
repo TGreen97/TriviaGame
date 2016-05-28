@@ -11,7 +11,7 @@ $( document ).ready(function() {
     var correct = 0;
     var incorrect = 0;
     var userAnswer = 0;
-    var lockGame = false;
+    //var lockGame = false;
 
       // FUNCTIONS
     function startGame(){
@@ -45,8 +45,8 @@ $( document ).ready(function() {
     	$("#a").html(triviaQuestions.q1[1]);
     	$("#b").html(triviaQuestions.q1[2]);
     	$("#c").html(triviaQuestions.q1[3]);
-      $(".btn").on("click", function() {
-          if (lockGame != true) {
+      	$(".btn").on("click", function() {
+          //if (lockGame != true) {
             userAnswer = $(this).attr("value");
             console.log(userAnswer);
             if (userAnswer == "1") {
@@ -55,17 +55,18 @@ $( document ).ready(function() {
               incorrect++;
             }
             $(".btn").value = " ";
+            $(".btn").off("click", "**");
             console.log("Right: " + correct);
             console.log("Wrong: " + incorrect);
-          }
+          
           //$("#qAndA").empty();
          // =================================
-          $(".triviaQuestions").html(triviaQuestions.q2[0]);
+          /* $(".triviaQuestions").html(triviaQuestions.q2[0]);
           $("#a").html(triviaQuestions.q2[1]);
           $("#b").html(triviaQuestions.q2[2]);
           $("#c").html(triviaQuestions.q2[3]);
           $(".btn").on("click", function() {
-              if (lockGame != true) {
+              //if (lockGame != true) {
                 userAnswer = $(this).attr("value");
                 console.log(userAnswer);
                 if (userAnswer == "3") {
@@ -74,9 +75,27 @@ $( document ).ready(function() {
                   incorrect++;
                 }
                 $(".btn").value = " ";
+                $(".btn").off("click", "**");
                 console.log("Right: " + correct);
-                console.log("Wrong: " + incorrect);
-              }
+                console.log("Wrong: " + incorrect); */
+
+              $(".triviaQuestions").html(triviaQuestions.q3[0]);
+	          $("#a").html(triviaQuestions.q3[1]);
+	          $("#b").html(triviaQuestions.q3[2]);
+	          $("#c").html(triviaQuestions.q3[3]);
+	          $(".btn").on("click", function() {
+	              //if (lockGame != true) {
+	                userAnswer = $(this).attr("value");
+	                console.log(userAnswer);
+	                if (userAnswer == "2") {
+	                  correct++;
+	                } else {
+	                  incorrect++;
+	                }
+	                $(".btn").value = " ";
+	                $(".btn").off("click", "**");
+	                console.log("Right: " + correct);
+	                console.log("Wrong: " + incorrect);
               //$("#qAndA").empty();
           });   
               // =================================
@@ -141,7 +160,7 @@ $( document ).ready(function() {
       });
      
         
-    } 
+    }
     
 	  
 	  
