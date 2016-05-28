@@ -48,3 +48,22 @@ table {
 }
 
 /* RESET CSS */
+
+body {
+	background-image: url(../images/80Wallpaper.jpg);
+}
+
+.jumbotron {
+	background-image: url(../images/new-coke.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.panel-default {
+	background-color: #8DF659;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
